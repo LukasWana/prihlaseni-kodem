@@ -4,65 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Jak se přihlásit kódem z e-mailu</title>
+<title>Přihlášení kódem z e-mailu</title>
 <style>
-:root{--bg:#f4f6f8;--card:#fff;--text:#1d2530;--muted:#5b6674;--line:#d9e0e7;--accent:#1f5fbf;--ok:#1d7a46;--warn:#9a5b00}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181d;--card:#1c2229;--text:#e8edf2;--muted:#a3adb8;--line:#2c353f;--accent:#7db0ff;--ok:#5fcf8f;--warn:#f0b35a}}
+:root{--bg:#f4f6f8;--card:#fff;--text:#1d2530;--muted:#5b6674;--line:#d9e0e7;--accent:#1f5fbf;--warn:#b3261e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181d;--card:#1c2229;--text:#e8edf2;--muted:#a3adb8;--line:#2c353f;--accent:#7db0ff;--warn:#ff8a80}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:18px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-main{max-width:720px;margin:0 auto;padding:28px 16px 56px}
-h1{font-size:1.7rem;line-height:1.25;margin:0 0 8px}
-.lead{color:var(--muted);margin:0 0 28px}
-ol{list-style:none;padding:0;margin:0 0 28px;counter-reset:k}
-li.krok{counter-increment:k;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 16px 16px 64px;margin:0 0 14px;position:relative}
-li.krok::before{content:counter(k);position:absolute;left:16px;top:16px;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
-li.krok b{display:block;margin-bottom:4px}
-.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:0 0 14px}
-.box h2{font-size:1.1rem;margin:0 0 6px}
-.ok{border-left:5px solid var(--ok)}.warn{border-left:5px solid var(--warn)}
-a{color:var(--accent)}
-code{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:.95em}
-small{color:var(--muted)}
+body{margin:0;background:var(--bg);color:var(--text);font:20px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;padding:28px 16px 48px}
+h1{font-size:1.6rem;line-height:1.25;margin:0 0 20px}
+ol{list-style:none;padding:0;margin:0 0 20px;counter-reset:k}
+li{counter-increment:k;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 62px;margin:0 0 12px;position:relative}
+li::before{content:counter(k);position:absolute;left:14px;top:12px;width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+.ne{color:var(--warn);font-weight:700}
+p{margin:0 0 10px}
+small{color:var(--muted);font-size:.85em}
 </style>
 </head>
 <body>
 <main>
-  <h1>Jak se přihlásit kódem z e-mailu</h1>
-  <p class="lead">Některé naše stránky jsou chráněné. Místo hesla se přihlašujete jednorázovým kódem, který vám přijde na e-mail. Trvá to asi minutu a nic se neinstaluje.</p>
-
+  <h1>Přihlášení kódem z e-mailu</h1>
   <ol>
-    <li class="krok"><b>Otevřete odkaz, který jste dostali.</b>
-      Místo stránky se ukáže tmavé přihlašovací okno s nápisem <b>Cloudflare Access</b>. Nadpis v něm může znít „Log in to PreludeCRM“, i když otevíráte jiný odkaz. To je v pořádku.</li>
-    <li class="krok"><b>Do pole „Email“ napište svůj pracovní e-mail a klikněte na modré tlačítko „Send login code“.</b>
-      Přesně tu adresu, na kterou vám odkaz přišel.
-      <br><b>Neklikejte na tlačítko „Cloudflare“</b> nad polem. To je přihlášení do účtu Cloudflare, který nemáte, a nefunguje.</li>
-    <li class="krok"><b>Otevřete svou poštu.</b>
-      Přijde krátká zpráva od odesílatele <code>noreply@notify.cloudflareaccess.com</code> a v ní kód z číslic. Zprávu nemusíte nikam přeposílat, jen z ní opište kód.</li>
-    <li class="krok"><b>Vložte kód do okna v prohlížeči.</b>
-      Hned potom se stránka otevře. Zpátky na okno s e-mailem se vracet nemusíte.</li>
+    <li>Otevřete odkaz, který jste dostali.</li>
+    <li>Do pole <b>Email</b> napište svůj e-mail a klikněte na <b>Send login code</b>.<br><span class="ne">Neklikejte na „Cloudflare“.</span></li>
+    <li>Z e-mailu opište kód.</li>
+    <li>Vložte kód do okna. Hotovo.</li>
   </ol>
-
-  <div class="box ok">
-    <h2>Platí to jen pro vás</h2>
-    Kód je na jedno použití a krátce platí. Nikomu ho neposílejte ani nepřeposílejte. Za nějaký čas vás stránka požádá o přihlášení znovu, to je v pořádku.
-  </div>
-
-  <div class="box warn">
-    <h2>Kód nepřišel?</h2>
-    <ul>
-      <li>Zkontrolujte složku <b>Spam</b> (nevyžádaná pošta) a případně karanténu.</li>
-      <li>Počkejte pár minut a požádejte o <b>nový kód</b>. Platí vždy ten poslední, starší kódy přestanou fungovat.</li>
-      <li>Zkontrolujte, že jste napsali <b>stejnou adresu</b>, na kterou jste dostali pozvání. Na jinou adresu kód nikdy nepřijde, i když to okno tvrdí.</li>
-      <li>Pořád nic? Napište tomu, od koho jste odkaz dostali. Pravděpodobně vaši adresu ještě nepřidal mezi povolené.</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h2>Je to bezpečné?</h2>
-    Ano. Cloudflare jen ověřuje, že vaše e-mailová schránka je opravdu vaše. Nezná vaše heslo k poště a žádné heslo si od vás nevyžádá. Zprávu s kódem vám nikdo jiný než přihlašovací okno, které jste sami otevřeli, nepošle. Pokud kód přijde, aniž byste se přihlašovali, ignorujte ho.
-  </div>
-
-  <p><small>Tento návod je obecný a neobsahuje žádné interní údaje.</small></p>
+  <p><b>Kód nepřišel?</b> Podívejte se do spamu a zkontrolujte, že jste napsali stejnou adresu, na kterou jste dostali odkaz.</p>
+  <p><small>Kód je jen pro vás, nikomu ho neposílejte.</small></p>
 </main>
 </body>
 </html>
